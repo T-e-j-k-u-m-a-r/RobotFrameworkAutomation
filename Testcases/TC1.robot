@@ -5,6 +5,7 @@ Library  SeleniumLibrary        screenshot_root_directory=./screenshots
 
 Test Setup          Open browser
 Test Teardown       Close Browser
+
 Resource            resource.robot
 
 *** Variables ***
