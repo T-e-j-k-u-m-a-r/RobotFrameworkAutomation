@@ -4,10 +4,25 @@ Documentation  : Resource file to store all the global variables, keywords
 
 *** Variables ***
 
+#valid and invalid scenario based variables
+${error_message}              css:div.alert.alert-danger.col-md-12 strong
+${user_name_text_box}         id:username
+${password_text_box}          id:password
+${login_btn}                  id:signInBtn
+
 #test data for form filling for creation of new user
 ${name_value}                           TestingUser
 ${email_address_value}                  TestingUser@mailinator.com
-${password}                             Test@123
+${username}                             rahulshettyacademy
+${password}                             pass@123
+${valid_password}                       learning
+${invalid_password}                     learning@123
+${registration_app_url}                 https://rahulshettyacademy.com/loginpagePractise/
+${automation_practise_url}              http://automationexercise.com
+
+#sign up elements
+${signup_user_name}                 form[action="/signup"] input[data-qa="signup-name"]
+${signup_email_address}             form[action="/signup"] input[data-qa="signup-email"]
 
 ${first_name_value}               TestingUser_FN
 ${last_name_value}                TestingUser_LN
@@ -20,7 +35,7 @@ ${zipcode_value}                  560011
 ${mobilenumber_value}             9988001122
 
 #Login page screen elements
-${app_url}                  http://automationexercise.com
+${registration_app_url}     http://automationexercise.com
 ${home_menu}                css:div.container div.shop-menu a:nth-of-type(1)
 ${signup_login_menu}        xpath://a[normalize-space()='Signup / Login']
 ${new_user_signup}          xpath://h2[normalize-space()='New User Signup!']
@@ -74,6 +89,32 @@ ${logout_menu}                                  xpath://a[normalize-space()='Log
 ${delete_account_menu}                          xpath://a[normalize-space()='Delete Account']
 ${account_deleted_confirmation}                 xpath://b[normalize-space()='Account Deleted!']
 ${account_deleted_confirmation_message}         xpath://p[normalize-space()='Your account has been permanently deleted!']
-
+${checkout_menu}                                css:.nav-link.btn.btn-primary
 
 *** Keywords ***
+Create WebDriver, open browser, and launch the registration URL
+    Create Webdriver    Chrome
+    Go To   ${registration_app_url}
+
+Navigate to the automation practise page
+    Go To       ${automation_practise_url}
+
+maximize the browser window
+    Maximize Browser Window
+
+fill the login form
+    [arguments]     ${username}   ${password}
+
+    Input Text      ${user_name_text_box}        ${username}
+    Input Password  ${password_text_box}         ${password}
+
+click on login button
+    Click Button    ${login_btn}
+
+wait untill the checkout menu is visible
+    Wait Until Element Is Visible       ${checkout_menu}
+
+print the message that login is success
+    Log         "Login is success"
+
+

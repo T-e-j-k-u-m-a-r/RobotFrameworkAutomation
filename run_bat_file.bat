@@ -1,0 +1,4 @@
+robot Testcases/New_user_registration.robot
+robot Testcases/Login_with_valid_credentials.robot
+robot Testcases/Login_with_invalid_credentials.robot
+
