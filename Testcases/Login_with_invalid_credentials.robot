@@ -4,7 +4,7 @@ Documentation  Login with invalid credentials
 
 Library         SeleniumLibrary        screenshot_root_directory=./screenshots
 
-Test Setup      Create WebDriver, open browser, and launch the registration URL
+Test Setup      Create WebDriver and open browser
 Test Teardown   Close Browser
 
 Resource        resource.robot
@@ -15,6 +15,7 @@ Resource        resource.robot
 *** Test Cases ***
 Login with invalid credentials and validate presence of error message
 
+    Navigate to registration page
     maximize the browser window
     fill the login form     ${username}       ${invalid_password}
     click on login button

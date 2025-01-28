@@ -9,8 +9,12 @@ ${error_message}              css:div.alert.alert-danger.col-md-12 strong
 ${user_name_text_box}         id:username
 ${password_text_box}          id:password
 ${login_btn}                  id:signInBtn
+${automation_practise_login_btn}        css:button[data-qa='login-button']
+
 
 #test data for form filling for creation of new user
+${automation_practise_email_id}         connect.tejkumar@gmail.com
+${automation_practise_password}         password
 ${name_value}                           TestingUser
 ${email_address_value}                  TestingUser@mailinator.com
 ${username}                             rahulshettyacademy
@@ -91,9 +95,44 @@ ${account_deleted_confirmation}                 xpath://b[normalize-space()='Acc
 ${account_deleted_confirmation_message}         xpath://p[normalize-space()='Your account has been permanently deleted!']
 ${checkout_menu}                                css:.nav-link.btn.btn-primary
 
+#Product page locators
+${mens_product_one}                             Grunt Blue Slim Fit Jeans
+${product_menu}                                 xpath://a[@href='/products']
+${search_inputbox}                              xpath://input[@id='search_product']
+${submit_search_button}                         xpath://button[@id='submit_search']
+${searched_product_text}                        xpath://h2[normalize-space()='Searched Products']
+${add_to_cart_btn}                              xpath:(//a[@class='btn btn-default add-to-cart'][normalize-space()='Add to cart'])[2]
+${product_added_to_cart_element}                xpath://p[normalize-space()='Your product has been added to cart.']
+${continue_shopping_btn}                        xpath://button[normalize-space()='Continue Shopping']
+${view_cart_link}                               xpath://u[normalize-space()='View Cart']
+${cart_menu}                                    css:a[href='/view_cart']
+${cart_table}                                   id:cart_info
+${cart_table_row_for_single_product}            id:#product-37
+${proceed_to_checkout_btn}                      xpath://a[normalize-space()='Proceed To Checkout']
+${checkout_text}                                xpath:(//li[@class='active'])[1]
+${comment_section_input_text}                   id:textarea[name='message']
+${quantity_of_products_added_to_card}           id:.disabled
+${place_order_btn}                              xpath://a[normalize-space()='Place Order']
+${logged_in_user}                               id:li:nth-child(10) a:nth-child(1)
+${name_on_the_card_input_text_box}              id:input[name='name_on_card']
+${card_number_input_text_box}                   id:input[name='card_number']
+${cvv_input_text_box}                           id:input[placeholder='ex. 311']
+${expiration_month_input_text_box}              css:input[placeholder='MM']
+${expiration_year_input_text_box}               css:input[placeholder='YYYY']
+${pay_and_confirm_order_btn}                    id:#submit
+${order_placed_text}                            xpath://b[normalize-space()='Order Placed!']
+${congratulation_on_order_placed_confirmation_message}      xpath://p[normalize-space()='Congratulations! Your order has been confirmed!']
+${download_invoice}                             xpath://a[normalize-space()='Download Invoice']
+${logout_menu}                                  css:a[href='/logout']
+${signup_login_menu}                            css:a[href='/login']
+
+
 *** Keywords ***
-Create WebDriver, open browser, and launch the registration URL
+Create WebDriver and open browser
     Create Webdriver    Chrome
+
+
+Navigate to registration page
     Go To   ${registration_app_url}
 
 Navigate to the automation practise page
