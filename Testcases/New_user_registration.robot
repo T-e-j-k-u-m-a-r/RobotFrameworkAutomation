@@ -34,7 +34,11 @@ Register a new user to the application
 
 *** Keywords ***
 Create webdriver and open browser
-        Create Webdriver    Chrome
+#         ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+#         Call Method    ${options}    add_argument    --headless
+#         Call Method    ${options}    add_argument    --disable-gpu
+#         Call Method    ${options}    add_argument    --window-size=1920,1080
+         Create Webdriver    Chrome
 
 Maximize the browser window
         Maximize Browser Window

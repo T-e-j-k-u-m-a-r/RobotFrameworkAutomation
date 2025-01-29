@@ -22,10 +22,10 @@ List Concepts
 
 *** Keywords ***
 Create webdriver and open the web application
-    ${options}=    Evaluate    selenium.webdriver.ChromeOptions()    modules=selenium
-    Call Method    ${options}    add_argument    --headless
-    Call Method    ${options}    add_argument    --disable-gpu
-    Call Method    ${options}    add_argument    --window-size=1920,1080
+#    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+#    Call Method    ${options}    add_argument    --headless
+#    Call Method    ${options}    add_argument    --disable-gpu
+#    Call Method    ${options}    add_argument    --window-size=1920,1080
     Create Webdriver        Chrome
     Go To                   ${application_url}
 

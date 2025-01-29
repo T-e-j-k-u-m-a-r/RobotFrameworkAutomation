@@ -129,10 +129,10 @@ ${signup_login_menu}                            css:a[href='/login']
 
 *** Keywords ***
 Create WebDriver and open browser
-    ${options}=    Evaluate    selenium.webdriver.ChromeOptions()    modules=selenium
-    Call Method    ${options}    add_argument    --headless
-    Call Method    ${options}    add_argument    --disable-gpu
-    Call Method    ${options}    add_argument    --window-size=1920,1080
+#    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+#    Call Method    ${options}    add_argument    --headless
+#    Call Method    ${options}    add_argument    --disable-gpu
+#    Call Method    ${options}    add_argument    --window-size=1920,1080
     Create Webdriver    Chrome
 
 Navigate to registration page

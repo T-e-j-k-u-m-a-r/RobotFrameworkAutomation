@@ -1,122 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-28T21:36:44.300002" rpa="false" schemaversion="5">
-<suite id="s1" name="Lists1" source="C:\Users\LENOVO\PycharmProjects\RobotFrameworkAutomation\Testcases\Lists1.robot">
-<test id="s1-t1" name="Exploring the concept of Lists in Collection library" line="17">
-<kw name="Create webdriver and go to application url">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-29T12:24:59.083539" rpa="false" schemaversion="5">
+<suite id="s1" name="Login with invalid credentials" source="C:\Users\LENOVO\PycharmProjects\RobotFrameworkAutomation\Testcases\Login_with_invalid_credentials.robot">
+<test id="s1-t1" name="Login with invalid credentials and validate presence of error message" line="16">
+<kw name="Create WebDriver and open browser" owner="resource" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-29T12:24:59.894302" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000024989D15E80&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-29T12:24:59.893822" elapsed="0.000552"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-29T12:24:59.894597" elapsed="0.000234"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-29T12:24:59.895001" elapsed="0.000200"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2025-01-29T12:24:59.895697" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</msg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--window-size=1920,1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2025-01-29T12:24:59.895373" elapsed="0.000584">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+</kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-01-28T21:36:45.738388" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-01-28T21:36:45.738133" elapsed="9.977859"/>
+<status status="NOT RUN" start="2025-01-29T12:24:59.896157" elapsed="0.000047"/>
 </kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-01-28T21:36:55.717268" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
-<arg>${app_url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-01-28T21:36:55.716686" elapsed="2.157711"/>
+<status status="FAIL" start="2025-01-29T12:24:59.892757" elapsed="0.003626">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-28T21:36:57.874861" elapsed="1.166855"/>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-29T12:24:59.897006" elapsed="0.000186"/>
 </kw>
-<status status="PASS" start="2025-01-28T21:36:45.737063" elapsed="13.304914"/>
-</kw>
-<kw name="Add Button Based on Product Name">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-28T21:36:59.094112" level="INFO">Typing text 'rahulshettyacademy' into text field 'css:#username'.</msg>
-<arg>${username_textbox}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-28T21:36:59.043269" elapsed="1.238986"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-01-28T21:37:00.283253" level="INFO">Typing password into text field 'css:#password'.</msg>
-<msg time="2025-01-28T21:37:00.356420" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${password_textbox}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-28T21:37:00.282692" elapsed="0.157891"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-28T21:37:00.441181" level="INFO">Clicking button 'css:#signInBtn'.</msg>
-<arg>${sign_in_btn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-28T21:37:00.440870" elapsed="0.158471"/>
-</kw>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-01-28T21:37:00.620156" level="INFO">${products} = []</msg>
-<var>${products}</var>
-<arg>css:.card-title a</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-01-28T21:37:00.599829" elapsed="0.020446"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-01-28T21:37:00.621074" level="INFO">${index} = 1</msg>
-<var>${index}</var>
-<arg>1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-01-28T21:37:00.620676" elapsed="0.000485"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${product_name}' == '${ele.text.strip()}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="NOT RUN" start="2025-01-28T21:37:00.622224" elapsed="0.000158"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${index}</var>
-<arg>${index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2025-01-28T21:37:00.622804" elapsed="0.000070"/>
-</kw>
-<var name="${ele}"/>
-<status status="NOT RUN" start="2025-01-28T21:37:00.621846" elapsed="0.001121"/>
-</iter>
-<var>${ele}</var>
-<value>@{products}</value>
-<status status="NOT RUN" start="2025-01-28T21:37:00.621416" elapsed="0.001653"/>
-</for>
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath://app-card[${index}]//div[1]//div[2]//button[1]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-28T21:37:00.623566" elapsed="3.927174"/>
-</kw>
-<arg>Wait Until Element Is Visible</arg>
-<arg>xpath://app-card[${index}]//div[1]//div[2]//button[1]</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="PASS" start="2025-01-28T21:37:00.623291" elapsed="3.927671"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-01-28T21:37:09.554116" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-01-28T21:37:04.551236" elapsed="5.003497"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-28T21:37:09.559597" level="INFO">Clicking element 'xpath://app-card[1]//div[10]//div[2]//button[1]'.</msg>
-<msg time="2025-01-28T21:37:10.012705" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-01-28T21:37:10.013041" level="FAIL">Element with locator 'xpath://app-card[1]//div[10]//div[2]//button[1]' not found.</msg>
-<arg>xpath://app-card[${index}]//div[10]//div[2]//button[1]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-01-28T21:37:09.555282" elapsed="0.990815">Element with locator 'xpath://app-card[1]//div[10]//div[2]//button[1]' not found.</status>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>10s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-01-28T21:37:10.546425" elapsed="0.000083"/>
-</kw>
-<status status="FAIL" start="2025-01-28T21:36:59.042844" elapsed="11.503862">Element with locator 'xpath://app-card[1]//div[10]//div[2]//button[1]' not found.</status>
-</kw>
-<status status="FAIL" start="2025-01-28T21:36:45.736074" elapsed="24.811148">Element with locator 'xpath://app-card[1]//div[10]//div[2]//button[1]' not found.</status>
+<status status="FAIL" start="2025-01-29T12:24:59.891487" elapsed="0.006019">Setup failed:
+Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
 </test>
-<kw name="No Operation" owner="BuiltIn" type="TEARDOWN">
-<doc>Does absolutely nothing.</doc>
-<status status="PASS" start="2025-01-28T21:37:10.548946" elapsed="0.000289"/>
-</kw>
-<doc>Mastering the concept of Lists</doc>
-<status status="FAIL" start="2025-01-28T21:36:44.304452" elapsed="26.244909"/>
+<doc>Login with invalid credentials</doc>
+<status status="FAIL" start="2025-01-29T12:24:59.086031" elapsed="0.812883"/>
 </suite>
 <statistics>
 <total>
@@ -125,7 +57,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Lists1" id="s1" pass="0" fail="1" skip="0">Lists1</stat>
+<stat name="Login with invalid credentials" id="s1" pass="0" fail="1" skip="0">Login with invalid credentials</stat>
 </suite>
 </statistics>
 <errors>
