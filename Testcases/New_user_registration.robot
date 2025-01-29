@@ -38,7 +38,7 @@ Create webdriver and open browser
 #         Call Method    ${options}    add_argument    --headless
 #         Call Method    ${options}    add_argument    --disable-gpu
 #         Call Method    ${options}    add_argument    --window-size=1920,1080
-         Create Webdriver    Chrome
+         Create Webdriver    headlesschrome
 
 Maximize the browser window
         Maximize Browser Window

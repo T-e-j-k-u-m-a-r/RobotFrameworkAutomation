@@ -129,11 +129,13 @@ ${signup_login_menu}                            css:a[href='/login']
 
 *** Keywords ***
 Create WebDriver and open browser
-#    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-#    Call Method    ${options}    add_argument    --headless
-#    Call Method    ${options}    add_argument    --disable-gpu
-#    Call Method    ${options}    add_argument    --window-size=1920,1080
-    Create Webdriver    Chrome
+#    The below 3 line of code will create webdriver and open chrome in headless mode
+    ${options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()
+    Call Method    ${options}   add_argument    --headless
+    Create Webdriver    Chrome      options=${options}
+
+#   The below link to be used when need to create webdriver and launch the chrome browser
+#    Create Webdriver    Chrome
 
 Navigate to registration page
     Go To   ${registration_app_url}

@@ -1,63 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-29T12:24:59.083539" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-29T13:27:33.138019" rpa="false" schemaversion="5">
 <suite id="s1" name="Login with invalid credentials" source="C:\Users\LENOVO\PycharmProjects\RobotFrameworkAutomation\Testcases\Login_with_invalid_credentials.robot">
 <test id="s1-t1" name="Login with invalid credentials and validate presence of error message" line="16">
 <kw name="Create WebDriver and open browser" owner="resource" type="SETUP">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-01-29T12:24:59.894302" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000024989D15E80&gt;</msg>
+<msg time="2025-01-29T13:27:33.926820" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000025FCB709E80&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-01-29T12:24:59.893822" elapsed="0.000552"/>
+<status status="PASS" start="2025-01-29T13:27:33.926179" elapsed="0.001116"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-01-29T12:24:59.894597" elapsed="0.000234"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-gpu</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-01-29T12:24:59.895001" elapsed="0.000200"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<msg time="2025-01-29T12:24:59.895697" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</msg>
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--window-size=1920,1080</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="FAIL" start="2025-01-29T12:24:59.895373" elapsed="0.000584">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+<status status="PASS" start="2025-01-29T13:27:33.927695" elapsed="0.000439"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-29T13:27:33.928898" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
+<arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="NOT RUN" start="2025-01-29T12:24:59.896157" elapsed="0.000047"/>
+<status status="PASS" start="2025-01-29T13:27:33.928464" elapsed="3.489645"/>
 </kw>
-<status status="FAIL" start="2025-01-29T12:24:59.892757" elapsed="0.003626">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+<status status="PASS" start="2025-01-29T13:27:33.924313" elapsed="3.494125"/>
+</kw>
+<kw name="Navigate to registration page" owner="resource">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-29T13:27:37.423322" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${registration_app_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-29T13:27:37.422909" elapsed="4.610279"/>
+</kw>
+<status status="PASS" start="2025-01-29T13:27:37.421823" elapsed="4.611663"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-29T12:24:59.897006" elapsed="0.000186"/>
+<status status="PASS" start="2025-01-29T13:27:42.035784" elapsed="2.237522"/>
 </kw>
-<status status="FAIL" start="2025-01-29T12:24:59.891487" elapsed="0.006019">Setup failed:
-Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+<status status="PASS" start="2025-01-29T13:27:33.921566" elapsed="10.352998"/>
 </test>
 <doc>Login with invalid credentials</doc>
-<status status="FAIL" start="2025-01-29T12:24:59.086031" elapsed="0.812883"/>
+<status status="PASS" start="2025-01-29T13:27:33.142961" elapsed="11.135213"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Login with invalid credentials" id="s1" pass="0" fail="1" skip="0">Login with invalid credentials</stat>
+<stat name="Login with invalid credentials" id="s1" pass="1" fail="0" skip="0">Login with invalid credentials</stat>
 </suite>
 </statistics>
 <errors>
