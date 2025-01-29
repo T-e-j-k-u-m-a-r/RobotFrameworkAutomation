@@ -1,48 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-29T13:27:33.138019" rpa="false" schemaversion="5">
-<suite id="s1" name="Login with invalid credentials" source="C:\Users\LENOVO\PycharmProjects\RobotFrameworkAutomation\Testcases\Login_with_invalid_credentials.robot">
-<test id="s1-t1" name="Login with invalid credentials and validate presence of error message" line="16">
-<kw name="Create WebDriver and open browser" owner="resource" type="SETUP">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-01-29T13:27:33.926820" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000025FCB709E80&gt;</msg>
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-01-29T13:27:33.926179" elapsed="0.001116"/>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-29T15:33:42.200828" rpa="false" schemaversion="5">
+<suite id="s1" name="Alerts" source="C:\Users\LENOVO\PycharmProjects\RobotFrameworkAutomation\Testcases\Alerts.robot">
+<test id="s1-t1" name="TC1: Exploring robotframework" line="10">
+<kw name="Launch the application">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-29T15:33:42.952827" level="INFO">Opening browser 'headlesschrome' to base url 'https://demo.automationtesting.in/Alerts.html'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-29T15:33:42.952415" elapsed="5.719229"/>
 </kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--headless</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-01-29T13:27:33.927695" elapsed="0.000439"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-29T15:33:48.673795" elapsed="3.369350"/>
 </kw>
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-01-29T13:27:33.928898" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>Chrome</arg>
-<arg>options=${options}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-01-29T13:27:33.928464" elapsed="3.489645"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Alerts</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-29T15:33:52.043950" elapsed="0.068002"/>
 </kw>
-<status status="PASS" start="2025-01-29T13:27:33.924313" elapsed="3.494125"/>
+<status status="PASS" start="2025-01-29T15:33:42.951407" elapsed="9.160960"/>
 </kw>
-<kw name="Navigate to registration page" owner="resource">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-01-29T13:27:37.423322" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
-<arg>${registration_app_url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-01-29T13:27:37.422909" elapsed="4.610279"/>
+<kw name="Print the application url">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-01-29T15:33:52.122664" level="INFO">${current_url} = https://demo.automationtesting.in/Alerts.html</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-01-29T15:33:52.113420" elapsed="0.009351"/>
 </kw>
-<status status="PASS" start="2025-01-29T13:27:37.421823" elapsed="4.611663"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current URL: ${current_url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-29T15:33:52.123072" elapsed="0.000609"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-29T13:27:42.035784" elapsed="2.237522"/>
+<status status="PASS" start="2025-01-29T15:33:52.113016" elapsed="0.010884"/>
 </kw>
-<status status="PASS" start="2025-01-29T13:27:33.921566" elapsed="10.352998"/>
+<kw name="Print the application title">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-01-29T15:33:52.134724" level="INFO">${page_title} = Alerts</msg>
+<var>${page_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-29T15:33:52.124915" elapsed="0.009890"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Title: ${page_title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-29T15:33:52.135062" elapsed="0.000459"/>
+</kw>
+<status status="PASS" start="2025-01-29T15:33:52.124404" elapsed="0.011345"/>
+</kw>
+<status status="PASS" start="2025-01-29T15:33:42.950288" elapsed="9.185961"/>
 </test>
-<doc>Login with invalid credentials</doc>
-<status status="PASS" start="2025-01-29T13:27:33.142961" elapsed="11.135213"/>
+<doc>Exploring the Robot Framework</doc>
+<status status="PASS" start="2025-01-29T15:33:42.203461" elapsed="9.933738"/>
 </suite>
 <statistics>
 <total>
@@ -51,7 +61,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Login with invalid credentials" id="s1" pass="1" fail="0" skip="0">Login with invalid credentials</stat>
+<stat name="Alerts" id="s1" pass="1" fail="0" skip="0">Alerts</stat>
 </suite>
 </statistics>
 <errors>

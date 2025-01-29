@@ -16,11 +16,11 @@ Resource        resource.robot
 Login with invalid credentials and validate presence of error message
 
     Navigate to registration page
-#    maximize the browser window
-#    fill the login form     ${username}       ${invalid_password}
-#    click on login button
-#    wait until error message is displayed
-#    verify if the error message is valid
+    maximize the browser window
+    fill the login form     ${username}       ${invalid_password}
+    click on login button
+    wait until error message is displayed
+    verify if the error message is valid
 
 
 *** Keywords ***
