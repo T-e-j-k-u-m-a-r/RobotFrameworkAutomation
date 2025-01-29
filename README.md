@@ -1,66 +1,188 @@
-# RobotFrameworkAutomation
+🤖 RobotFramework Automation 🚀
 
-Gist Page: https://gist.github.com/T-e-j-k-u-m-a-r/a61dcdcf45c95d2ac2d86c58d87d5e14
+📌 Gist Page: 🔗 Click Here
 
-Get Started: 
+------------------------------------------------------------------------------------------------------------------------------------------
 
-1. Install python from official site(https://www.python.org/downloads/)
-	Define the python environment variables
-		Run the command where python from the command line to know the python installed location
-		Open the file explorer for the path till PythonXXX where XXX stands for version 
-			Example: Python 3.13.1, The folder name would be somthing like Python313
+🎯 Get Started
+🐍 Install Python
+✅ Download from the official site 👉 🔗 Python Downloads
+✅ Set up Python Environment Variables
+✅ Run the command:
 
-		Path: C:\Users\LENOVO\AppData\Local\Programs\Python\Python313
-		
-	Note: Navigate inside the path: C:\Users\LENOVO\AppData\Local\Programs\Python\Python313\Scripts folder and copy the path
-	
-	Open edit the system environment variables -> Environment Variables -> System Variables -> Click on Path -> Click on edit
-			And PASTE the above link of the Python script path and close that window
+where python
 
-	Check if the python installation works fine by running below commands. 
-		
-		python --version
-		pip --version
-		
------------------------------------------------------------------------------------------------------------------------------------------------------	
+🔍 This will show the installed location of Python.
+📂 Navigate to the Python directory. Example for Python 3.13.1:
 
-2. Install Pycharm from offical site (Community version: https://www.jetbrains.com/pycharm/download/?section=windows)
-	
-	Create a new project with name Automation in Pycharm
+C:\Users\LENOVO\AppData\Local\Programs\Python\Python313
 
-	Install the packages(3)
-		Pycharm -> Settings -> Project: Automation -> Python Interpreter 
+📌 Important:
+🔹 Go to Scripts folder:
 
-		Note: By default: Only pip package will be shown in the installed list		
+C:\Users\LENOVO\AppData\Local\Programs\Python\Python313\Scripts
 
-		Click on the '+' icon and install the below packages. 
+🔹 Copy this path!
 
-		selenium
-		robotframework
-		robotframework-seleniumlibrary
+✏️ Update System Environment Variables:
+1️⃣ Open Edit the system environment variables
+2️⃣ Click on Environment Variables
+3️⃣ Under System Variables, find Path
+4️⃣ Click Edit and PASTE the copied Scripts path
 
-		For execution in parallel mode: Install this package from Python Interpreter screen 
-		
-		robotframework-pabot
+✅ Verify Python Installation
+Run the following commands to check installation:
 
-		Note: 
-			1. replace robot filename.robot by pabot filename.robot to run a specific .robot file
-			2. To run all the tests using pabot then the command should be pabot . 
+python --version
+pip --version
 
-		Once all 3 are installed in the Python Interpreter section, Below 4 packages should be present
-			
+🛠 Install PyCharm
+🔗 Download (Community Version): PyCharm Download
 
-	Install the plugin for auto completion
-		
-		Pycharm -> Settings -> Plugins -> 
+🔧 Create a New Project
+📌 Project Name: Automation
 
-			1. Enter this plugin name "IntelliBot @SeleniumLibrary Patched" in the search bar and install it
-			2. 1. Enter this plugin name "Hyper RobotFramework Support" in the search bar and install it and close the window
-			3. RobotCode- Robot Framework Support
-	
+📦 Install Required Packages
+Navigate to:
+PyCharm → Settings → Project: Automation → Python Interpreter
 
-	Check if robot framework works fine by running below command: 
+📢 By default, only pip will be installed. Now, install these packages:
 
-		robot --version
-		pip show robotframework
+pip install selenium
+pip install robotframework
+pip install robotframework-seleniumlibrary
+
+⚡ For Parallel Execution
+
+pip install robotframework-pabot
+
+📌 Usage:
+✔️ Run a specific test
+
+pabot filename.robot
+
+✔️ Run all tests:
+pabot .
+
+🔎 After installation, ensure these 4 packages are present in the Python Interpreter section.
+
+------------------------------------------------------------------------------------------------------------------
+
+🔌 Install Plugins for Auto-Completion
+
+Navigate to:
+PyCharm → Settings → Plugins
+
+🔍 Search & Install these plugins:
+1️⃣ "IntelliBot @SeleniumLibrary Patched"
+2️⃣ "Hyper RobotFramework Support"
+3️⃣ "RobotCode - Robot Framework Support"
+
+
+Here's your enhanced GitHub README with stylish fonts, emojis, and a well-structured layout:
+
+🤖 RobotFramework Automation 🚀
+📌 Gist Page: 🔗 Click Here
+
+🎯 Get Started
+🐍 Install Python
+✅ Download from the official site 👉 🔗 Python Downloads
+✅ Set up Python Environment Variables
+✅ Run the command:
+
+sh
+Copy
+Edit
+where python
+🔍 This will show the installed location of Python.
+📂 Navigate to the Python directory. Example for Python 3.13.1:
+
+makefile
+Copy
+Edit
+C:\Users\LENOVO\AppData\Local\Programs\Python\Python313
+📌 Important:
+🔹 Go to Scripts folder:
+
+makefile
+Copy
+Edit
+C:\Users\LENOVO\AppData\Local\Programs\Python\Python313\Scripts
+🔹 Copy this path!
+
+✏️ Update System Environment Variables:
+1️⃣ Open Edit the system environment variables
+2️⃣ Click on Environment Variables
+3️⃣ Under System Variables, find Path
+4️⃣ Click Edit and PASTE the copied Scripts path
+
+✅ Verify Python Installation
+Run the following commands to check installation:
+
+sh
+Copy
+Edit
+python --version
+pip --version
+🛠 Install PyCharm
+🔗 Download (Community Version): PyCharm Download
+
+🔧 Create a New Project
+📌 Project Name: Automation
+
+📦 Install Required Packages
+Navigate to:
+PyCharm → Settings → Project: Automation → Python Interpreter
+
+📢 By default, only pip will be installed. Now, install these packages:
+
+sh
+Copy
+Edit
+pip install selenium
+pip install robotframework
+pip install robotframework-seleniumlibrary
+⚡ For Parallel Execution
+sh
+Copy
+Edit
+pip install robotframework-pabot
+📌 Usage:
+✔️ Run a specific test:
+
+sh
+Copy
+Edit
+pabot filename.robot
+✔️ Run all tests:
+
+sh
+Copy
+Edit
+pabot .
+🔎 After installation, ensure these 4 packages are present in the Python Interpreter section.
+
+🔌 Install Plugins for Auto-Completion
+Navigate to:
+PyCharm → Settings → Plugins
+
+🔍 Search & Install these plugins:
+1️⃣ "IntelliBot @SeleniumLibrary Patched"
+2️⃣ "Hyper RobotFramework Support"
+3️⃣ "RobotCode - Robot Framework Support"
+
+🎯 Verify Robot Framework Installation
+
+Run this command to check installation:
+
+robot --version
+pip show robotframework
+
+
+✅ All Set! 🎉 Now you’re ready to 🚀 automate with RobotFramework!
+
+
+💡 Happy Testing! 🏆 🚀
+
+
 
