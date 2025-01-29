@@ -1,7 +1,7 @@
 *** Settings ***
 
 Documentation           Login with valid credentials
-Library                 SeleniumLibrary     screenshot_root_directory=./screenshots
+Library                 SeleniumLibrary
 
 Test Setup              Create WebDriver and open browser
 Test Teardown           Close Browser

@@ -1,13 +1,21 @@
-# Python specific
+# Ignore temporary execution files
+output.xml
+log.html
+report.html
+screenshots/
+pabot_results/
+.pabotsuitenames
 
-# Virtual Environment
+# Ignore Python virtual environment
+venv/
+__pycache__/
+*.pyc
 
-# Logs and temporary files
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.db
 
-#log files
-
-#output files
-
-#report files
-
-#failed screenshots
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

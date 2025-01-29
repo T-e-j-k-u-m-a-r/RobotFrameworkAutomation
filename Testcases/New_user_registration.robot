@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  New user registration
 
-Library  SeleniumLibrary        screenshot_root_directory=./screenshots
+Library  SeleniumLibrary
 
 Test Setup          Create webdriver and open browser
 Test Teardown       Close Browser
