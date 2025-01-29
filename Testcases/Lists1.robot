@@ -20,6 +20,10 @@ Exploring the concept of Lists in Collection library
 
 *** Keywords ***
 Create webdriver and go to application url
+    ${options}=    Evaluate    selenium.webdriver.ChromeOptions()    modules=selenium
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --disable-gpu
+    Call Method    ${options}    add_argument    --window-size=1920,1080
     Create Webdriver    Chrome
     Go To               ${app_url}
     Maximize Browser Window
